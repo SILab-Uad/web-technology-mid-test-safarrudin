@@ -1,27 +1,99 @@
+/* Gaya umum untuk body */
 body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e7ff; /* Background color */
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe); /* Gradien latar belakang */
 }
 
+/* Container utama */
 .container {
     text-align: center;
     padding: 30px;
-    background-color: #ffffff; /* Background color for container */
+    background-color: #ffffff; /* Warna latar belakang untuk kontainer */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
 }
 
-/* TODO: Add styles for labels, inputs, buttons, and output text */
+/* Gaya untuk header */
 h1 {
-    font-size: 2.2em;
+    font-size: 2.5em; /* Ukuran font lebih besar */
     margin-bottom: 20px;
-    color: #4a4a4a; /* Header color */
+    color: #4cdcf5; /* Warna header */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan teks */
 }
 
-/* Add more styles here as needed */
+/* Gaya untuk label */
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1em;
+    color: #333; /* Warna label */
+}
+
+/* Gaya untuk input dan textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transisi untuk fokus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: #4cd3f5; /* Warna batas saat fokus */
+    box-shadow: 0 0 5px rgba(76, 139, 245, 0.5); /* Efek bayangan saat fokus */
+    outline: none;
+}
+
+/* Gaya untuk tombol */
+button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4cf58d; /* Warna tombol */
+    color: #ffffff; /* Warna teks tombol */
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transisi untuk hover */
+}
+
+button:hover {
+    background-color: #3a6fbf; /* Warna tombol saat hover */
+    transform: translateY(-2px); /* Efek angkat saat hover */
+}
+
+/* Gaya untuk output */
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0; /* Warna latar belakang output */
+    border-radius: 8px;
+    font-size: 1.1em;
+    color: #000; /* Warna teks output */
+    display: none; /* Tersembunyi secara default */
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Ukuran font header lebih kecil */
+    }
+
+    button {
+        width: 100%; /* Tombol memenuhi lebar kontainer */
+    }
+}
+
